@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-// schema
-const FileSchema = new mongoose.Schema(
+//schema
+const fileSchema = new mongoose.Schema(
   {
     url: {
       type: String,
@@ -11,7 +11,7 @@ const FileSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    uploaded_By: {
+    uploaded_by: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: "User",
@@ -22,6 +22,6 @@ const FileSchema = new mongoose.Schema(
   }
 );
 
-const File = mongoose.model("File", FileSchema);
+const File = mongoose.model("File", fileSchema);
 
 module.exports = File;
